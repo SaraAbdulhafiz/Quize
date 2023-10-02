@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:quize/second_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -188,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                     child: Container(
                       height:90,
-                      color: Color(0xFFA465B1FF),
+                      color: Color(0xFFF9F5FF),
                       child: Row(
                         children: [
                          Image.asset("assets/images/mind.png"),
@@ -207,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                     child: Container(
                       height: 90,
-                      color: Color(0xFFA465B1FF),
+                      color: Color(0xFFFDF2FA),
                       child: Row(
                         children: [
                           Image.asset("assets/images/med.png"),
@@ -230,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                     child: Container(
                       height:90,
-                      color: Color(0xFFA465B1FF),
+                      color: Color(0xFFFFFAF5),
                       child: Row(
                         children: [
                           Image.asset("assets/images/beathing.png"),
@@ -249,7 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                     child: Container(
                       height: 90,
-                      color: Color(0xFFA465B1FF),
+                      color: Color(0xFFF0F9FF),
                       child: Row(
                         children: [
                           Image.asset("assets/images/yoga.png"),
@@ -271,16 +272,27 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {
+          Navigator.pushNamed(context, SecondScreen.routeName);
+        },
         items: [
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/home_05.png")), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_tree),
-            label: 'load',
+              icon: ImageIcon(AssetImage("assets/images/home_05.png")),
+              label: ''),
+
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage("assets/images/grid_01.png")),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.charging_station),
-            label: 'charge',
+            icon: Icon(Icons.calendar_today_outlined),
+            label: '',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: '',
+          ),
+
         ],
       ),
     );
