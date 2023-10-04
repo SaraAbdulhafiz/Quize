@@ -21,6 +21,11 @@ class MyApp extends StatelessWidget {
         SecondScreen.routeName: (context) => SecondScreen(),
         ThirdScreen.routeName : (context) => ThirdScreen()
       },
+      theme: ThemeData(
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          unselectedItemColor: Colors.black,
+        ),
+      ),
     );
   }
 }
