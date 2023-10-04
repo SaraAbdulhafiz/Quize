@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quize/home_screen.dart';
 import 'package:quize/second_screen.dart';
+import 'package:quize/third_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,14 +19,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
         SecondScreen.routeName: (context) => SecondScreen(),
+        ThirdScreen.routeName : (context) => ThirdScreen()
       },
-      theme: ThemeData(
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          type: BottomNavigationBarType.shifting,
-          selectedItemColor: Color(0xFFF027A48),
-          unselectedItemColor: Color(0xFFF667085),
-        ),
-      ),
     );
   }
 }

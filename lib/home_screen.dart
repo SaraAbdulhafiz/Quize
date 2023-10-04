@@ -272,6 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Color(0xFFF027A48),
         onTap: (value) {
           Navigator.pushNamed(context, SecondScreen.routeName);
         },

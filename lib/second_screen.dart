@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quize/tap_bar.dart';
+import 'package:quize/third_screen.dart';
 
 class SecondScreen extends StatefulWidget {
   static const String routeName = 'second screen';
@@ -233,6 +233,9 @@ class _SecondScreenState extends State<SecondScreen> {
         ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.indigo,
+            onTap: (value) {
+              Navigator.pushNamed(context, ThirdScreen.routeName);
+            },
             items: [
           BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: ''),
           BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/icon12.png"),) , label: ''),
